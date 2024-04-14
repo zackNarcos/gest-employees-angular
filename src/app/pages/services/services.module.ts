@@ -9,7 +9,7 @@ import {FormsModule} from "@angular/forms";
 const routes: Routes = [
   { path: 'services', component: ServiceListComponent },
   { path: 'services/:id', component: ServiceDetailComponent },
-  { path: 'services/create', component: ServiceFormComponent }
+  { path: 'create', component: ServiceFormComponent }
 
 ];
 
