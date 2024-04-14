@@ -1,0 +1,50 @@
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="matricule">Matricule:</label>
+    <input type="text" id="matricule" name="matricule" [(ngModel)]="employee.matricule" required>
+  </div>
+  <div>
+    <label for="type">Type:</label>
+    <select id="type" name="type" [(ngModel)]="employee.type" required>
+      <option *ngFor="let type of allTypes" [value]="type">{{type}}</option>
+    </select>
+  </div>
+  <div  *ngIf="employee.type === EmployeeType.Contractuel">
+    <div>
+      <label for="service">Service:</label>
+      <select id="service" name="service" [(ngModel)]="employee.service" required>
+        <option *ngFor="let service of allServices" [value]="service.id">{{service.name}}</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="typeC">type de Contrat:</label>
+      <select id="typeC" name="contractType" [(ngModel)]="employee.contractType" required>
+        <option value="CDI">CDI</option>
+        <option value="CDD">CDD</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="typeC">Salaire:</label>
+      <input type="number" id="salaire" name="salaire" [(ngModel)]="employee.salary" required>
+    </div>
+  </div>
+  <div  *ngIf="employee.type === EmployeeType.Journalier">
+    <div>
+      <label for="costPerDay">coût par jour:</label>
+      <input type="number" id="costPerDay" name="costPerDay" [(ngModel)]="employee.costPerDay" required>
+    </div>
+  </div>
+  <div  *ngIf="employee.type === EmployeeType.Prestataire">
+    <div>
+      <label for="serviceCost">coût du service:</label>
+      <input type="number" id="serviceCost" name="serviceCost" [(ngModel)]="employee.serviceCost" required>
+    </div>
+    <div>
+      <label for="servicePeriod">Service periode:</label>
+      <input type="text" id="servicePeriod" name="servicePeriod" [(ngModel)]="employee.servicePeriod" required>
+    </div>
+  </div>
+  <button type="submit">Enregistrer</button>
+</form>

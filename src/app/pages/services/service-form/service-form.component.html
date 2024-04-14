@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="code">Code:</label>
+    <input type="text" id="code" name="code" [(ngModel)]="service.code" required>
+  </div>
+  <div>
+    <label for="name">Nom:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="service.name" required>
+  </div>
+  <button type="submit">Enregistrer</button>
+</form>

@@ -1,0 +1,11 @@
+{
+  "employees": [],
+  "services": [],
+  "payments": [],
+  "paymentMethods": [
+    { "id": 1, "name": "Virement Bancaire" },
+    { "id": 2, "name": "OM" },
+    { "id": 3, "name": "Wave" }
+  ],
+  "leaves": []
+}
