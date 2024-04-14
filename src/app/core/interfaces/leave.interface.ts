@@ -5,5 +5,4 @@ export interface Leave {
   startDate: Date;
   endDate: Date;
   type: EmployeeState;
-
 }
