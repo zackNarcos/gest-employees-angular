@@ -16,6 +16,7 @@ export class EmployeeFormComponent {
     matricule: '',
     state: EmployeeState.Present,
     type: EmployeeType.Prestataire,
+    name: '',
     serviceId: 0,
     contractType: '',
     salary: 0,
