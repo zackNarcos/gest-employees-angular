@@ -4,6 +4,18 @@
     <input type="number" id="employeeId" name="employeeId" [(ngModel)]="leave.employeeId" required>
   </div>
   <div>
+    <label for="employeeId2">Employees:</label>
+    <select id="employeeId2" name="employeeId" [(ngModel)]="leave.employeeId" required>
+      <option *ngFor="let employee of allEmployees" [value]="employee.id">{{employee.name}}</option>
+    </select>
+  </div>
+  <div>
+    <label for="leaveType">Type de congé:</label>
+    <select id="leaveType" name="leaveType" [(ngModel)]="leave.type" required>
+      <option *ngFor="let type of allTypes" [value]="type">{{type}}</option>
+    </select>
+  </div>
+  <div>
     <label for="startDate">Date de début:</label>
     <input type="date" id="startDate" name="startDate" [(ngModel)]="leave.startDate" required>
   </div>

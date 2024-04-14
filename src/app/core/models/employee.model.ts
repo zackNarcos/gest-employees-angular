@@ -6,6 +6,7 @@ export interface Employee {
   matricule: string;
   state: EmployeeState;
   type: EmployeeType;
+  name: string;
 }
 
 export interface Contractuel extends Employee {
